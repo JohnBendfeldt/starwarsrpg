@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+body {
+	background-image: url("../images/bg-starwars.jpg");
+	background-size: 2000px 1000px;
+}
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 48px;
+	float: right;
+	margin: 20px;
+	text-shadow:
+			-1px -1px 0 #FFFFFF,  
+    		1px -1px 0 #FFFFFF,
+    		-1px 1px 0 #FFFFFF,
+     		1px 1px 0 #FFFFFF;
+}
+h2 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 32px;
+}
+img {
+	width: 200px;
+	height: 100px;
+}
+.heading, .player, .enemies, .fight, .defender{
+
+	color:white;
+	font-size: 15px;
+	padding-left: 15px;
+}
+
+.notice{
+	color:#CDDC39;
+	margin-top: 5px;
+}
+.attack{
+	background: #CDDC39;
+	color:black;
+	border-radius: 4px;
+	
+}
+.heading{
+	font-size: 25px;
+	width:60%;
+	display:inline;
+	
+}
+
+.clear{
+	height:30px;
+	width:80px;
+	font-size:15px;
+	background: #CDDC39;
+	color:black;
+}
+
+.attackRow, .restartRow{
+	padding-left: 15px;
+}
+
+
+.thumbnail:hover,
+.selectedOpponent > .thumbnail{
+	background-color: #CDDC39;
+}
+
+
+.selectedDefender>.thumbnail{
+background: #e85d5d;
+/*color:black;*/
+
+}
+.thumbnail{
+	color:black;
+}
+
+
+
+.row.inactive{
+	margin:0;
+	/*display: inline;*/
+}
+.lost, .playerAttacks, .defenderAttacks{
+	color:white;
+}
+.tag{
+	
+    width: 165px;
+    position:absolute;
+    top: 0;
+    right: 0;
+    /*color:inherit;*/
+}
+.name{
+	color:white;
+	font-weight: bold;
+	color:#CDDC39;
+	font-size:20px;
+}
