@@ -67,7 +67,7 @@ $(document).ready(function() {
         } else {
             $this.addClass('selected');
         }
-        
+
         if (yourCharacter === false) {
             
             $('.player').after($this);
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
             // check if all enemies are defeated
             if (enemyDefeatedCount === 3) {
-                $('.won').html('<h1 class ="winningText">' + 'You Won' + '</h1>')
+                $('.won').html('<h1>' + 'You Won' + '</h1>')
             }
 
         } else {
@@ -132,7 +132,7 @@ $(document).ready(function() {
             return;
         }
 
-        $('.playerAttacks').html('You Attacked ' + y.name + ' for ' + attackPowerIncrement);
+        $('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement);
         $('.defenderAttacks').html(y.name + ' attacked you for ' + y.counterAttackPower);
     };
 
