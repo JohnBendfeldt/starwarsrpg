@@ -30,7 +30,7 @@ img {
 	margin: 0 10px;
 }
 p {
-	margin-right: 15px;
+	margin-left: 15px;
 }
 .character {
 	background-color: #FFFFFF;
@@ -41,7 +41,6 @@ p {
 }
 .attack{
 	background: #FD92AC;
-	color:black;
 	border-radius: 4px;
 }
 .clear{
@@ -49,14 +48,12 @@ p {
 	width:80px;
 	font-size:15px;
 	background: #FD92AC;
-	color:black;
 }
 button {
 	margin: 10px;
 }
 .selectedDefender {
 background: #e85d5d;
-/*color:black;*/
 }
 .lost, .playerAttacks, .defenderAttacks{
 	color: #FFFFFF;
