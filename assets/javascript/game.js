@@ -1,11 +1,12 @@
 $(document).ready(function() {
 
-	var yourCharacter = false;
-	var yourEnemies = false;
-	var yourDefender = false;
-	var playersArray = [];
-	var enemyDefeatedCount = 0;
-
+var yourCharacter = false;
+	yourEnemies = false;
+	yourDefender = false;
+	playersArray = [];
+	enemyDefeatedCount = 0;
+	audioWin = new Audio("assets/audio/victory.mp3");
+    audioLoss = new Audio("assets/audio/imperial_march.mp3");
 
 	// creating objects and assigning them to an array 
 
@@ -109,6 +110,7 @@ $(document).ready(function() {
 			// check if all enemies are defeated
 			if (enemyDefeatedCount === 3) {
 				$('.attack').hide();
+				audioWin.play();
 				$('.won').html('<h1>' + 'You Won! Hit ' + '<button>' + '<h2>' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
 			}
 
@@ -120,8 +122,8 @@ $(document).ready(function() {
 		if (x.healthPoints <= 0) {
 			x.element.hide();
  			$('.attack').hide();
+ 			audioLoss.play();
 			$('.lost').html('<h1>' + 'You Lost, hit ' + '<button>' + '<h2>' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
-			return;
 		}
 
 		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage.');
