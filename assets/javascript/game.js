@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 var yourCharacter = false;
 	yourEnemies = false;
-	yourDefender = false;
+	yourOpponent = false;
 	playersArray = [];
 	enemyDefeatedCount = 0;
 	audioWin = new Audio('assets/audio/victory.mp3');
@@ -55,12 +55,11 @@ var yourCharacter = false;
 	function startGame() {
 		yourCharacter = false;
 		yourEnemies = false;
-		yourDefender = false;
+		yourOpponent = false;
 	};
-	// appending players as your hero, enemies and defender
+	// appending players as your hero, enemies and opponent
 	function selectOpponents(event) {
 		event.preventDefault();
-		$('#instructions').hide();
 		var $this = $(this);
 		if (yourCharacter === false) {
             
@@ -74,23 +73,27 @@ var yourCharacter = false;
 			$('.enemies').after($('.inactive .character'));
 			}
 
-		} else if (yourDefender === false) {
-			$('.defender').after($this);
-			yourDefender = playersArray[$this.data('player') - 1];
-			yourDefender.element = $this;
-			$this.addClass('selectedDefender')
+		} else if (yourOpponent === false) {
+			$('.opponent').after($this);
+			yourOpponent = playersArray[$this.data('player') - 1];
+			yourOpponent.element = $this;
+			$this.addClass('selectedOpponent')
+			$('#instructions').html('Keep Attacking until all Enemies are Defeated');
+			$('.status').html('');
+			$('.playerAttacks').html('');
+			$('.opponentAttacks').html('');
 			$('.lost').html('');
 		}
 	};
 
 
-	// Sets uf the fight between characters
+	// Sets up the fight between characters
 
 	function fight(x, y) {
 
 		// if enemy not selected 
-		if (yourDefender === false) {
-			$('.status').html('<h1>' + 'Players not selected' + '<h1>');
+		if (yourOpponent === false) {
+			$('.status').html('<h1>' + 'Players not selected!' + '<h1>');
 			return;
 		}
 
@@ -103,8 +106,8 @@ var yourCharacter = false;
 
 		if (y.healthPoints <= 0) {
 			y.element.hide();
-			yourDefender = false;
-			$('.status').html('<h2>' + y.name + ' is defeated' + '</h2>');
+			yourOpponent = false;
+			$('.status').html('<h2>' + y.name + ' is defeated!' + '</h2>');
 			slay.play();
 			enemyDefeatedCount++;
 
@@ -113,8 +116,13 @@ var yourCharacter = false;
 				$('.attack').hide();
 				audioWin.play();
 				$('.playerAttacks').hide();
-				$('.defenderAttacks').hide();
-				$('.won').html('<h1>' + 'You Won! Hit ' + '<button>' + '<h2>' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
+				$('.opponentAttacks').hide();
+				$('#instructions').html('');
+				$('.fight').html('');
+				$('.enemies').html('');
+				$('.opponent').html('');
+				$('.player').html('Your Character is Victorious!');
+				$('.won').html('<h1>' + 'You Won! Hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
 			}
 
 		} else {
@@ -129,17 +137,21 @@ var yourCharacter = false;
  			death.play();
  			audioLoss.play();
  			$('.playerAttacks').hide();
-			$('.defenderAttacks').hide();
-			$('.lost').html('<h1>' + 'You Lost, hit ' + '<button>' + '<h2>' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
+			$('.opponentAttacks').hide();
+			$('#instructions').html('');
+			$('.fight').html('');
+			$('.player').html('Your Character had been Defeated!');
+			$('.opponent').html('Your Opponent is Victorious!');
+			$('.lost').html('<h1>' + 'You Lost, hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
 		}
 
 		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage.');
-		$('.defenderAttacks').html(y.name + ' attacked you for ' + y.counterAttackPower + ' damage.');
+		$('.opponentAttacks').html(y.name + ' attacked you for ' + y.counterAttackPower + ' damage.');
 	};
 
 	// setting function names
 	$('.character').on('click', selectOpponents);
 	$('.attack').on('click', function() {
-		fight(yourCharacter, yourDefender);
+		fight(yourCharacter, yourOpponent);
 	});
 });

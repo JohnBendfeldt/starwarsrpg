@@ -20,7 +20,12 @@ h1 {
 h2 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 32px;
-	margin: 5px;
+	margin: 0 10px;
+	text-shadow:
+			-.5px -.5px 0 #FFFFFF,  
+			.5px -.5px 0 #FFFFFF,
+			-.5px .5px 0 #FFFFFF,
+			.5px .5px 0 #FFFFFF;
 }
 h4 {
 	font-family: 'Oswald', sans-serif;
@@ -43,7 +48,7 @@ img {
 }
 
 p {
-	margin-left: 15px;
+	margin-left: 10px;
 	color: #FFFFFF;
 }
 
@@ -51,16 +56,16 @@ p {
 	background-color: #FFFFFF;
 	width: 220px;
 	border: 4px solid #000;
-	margin: 5px;
+	margin-left: 10px;
 	display: inline-block;
 }
 
 button {
 	background-color: #D9AF8B;
-	margin: 5px;
+	margin: 10px;
 }
 
-.selectedDefender {
+.selectedOpponent {
 	background: #e85d5d;
 }
 
