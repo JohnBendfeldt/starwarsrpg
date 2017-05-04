@@ -82,3 +82,29 @@ button {
 .selectedHero {
 	background-color: #B8F4CC;
 }
+
+@media only screen and (max-width: 768px) {
+	
+	h1 {
+		float: none;
+		margin-left: 5px;
+	}
+	h2 {
+		margin-left: 5px;
+	}
+
+	img {
+		width: 100px;
+		height: 50px;
+	}
+
+	.character {
+		width: 120px;
+		margin-left: 5px;
+		margin-bottom: 5px;
+	}
+
+	button {
+		margin-left: 5px;
+	}
+}
