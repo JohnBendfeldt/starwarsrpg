@@ -143,6 +143,4 @@ $(document).ready(function() {
     $('.attack').on('click', function() {
         fight(yourCharacter, yourDefender);
     });
-
-    $('.start').on('click', clickToStart);
 });
