@@ -67,8 +67,7 @@ $(document).ready(function() {
         } else {
             $this.addClass('selected');
         }
-        $('.notice').remove();
-
+        
         if (yourCharacter === false) {
             
             $('.player').after($this);
