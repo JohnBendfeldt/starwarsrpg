@@ -22,11 +22,18 @@ h2 {
 	font-size: 32px;
 	margin: 5px;
 }
-
+h4 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	text-align: center;
+	display: inline-block;
+}
 h5 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 15px;
 	text-align: center;
+	display: inline-block;
+	margin-left: 10px;
 }
 
 img {

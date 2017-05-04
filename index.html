@@ -14,40 +14,42 @@
 <body>
 <section>
 <h1>Star Wars RPG!</h1>
+<h2 id='instructions'>Choose a Hero and then Choose an Opponent to Fight</h2>
 <div class='inactive'>
 		<div class='character' data-player='1'>
 			<h5>Obi-Wan Kenobi</h5>
 			<img src='assets/images/obi-wan-kenobi.jpg' alt='Obi-Wan Kenobi'>
-			<h5 class='score'>150</h5>
+			<h5 class='score'>150</h5><h5>HP</h5>
 		</div>
 		<div class='character' data-player='2'>
 			<h5>Darth Maul</h5>
 			<img src='assets/images/darth-maul.jpeg' alt='Darth Maul'>
-			<h5 class='score'>120</h5>
+			<h5 class='score'>120</h5><h5>HP</h5>
 		</div>
 		<div class='character' data-player='3'>
 			<h5>Jar Jar Binks</h5>
 			<img src='assets/images/jar-jar.jpg' alt='Jar Jar Binks'>
-			<h5 class='score'>200</h5>
+			<h5 class='score'>200</h5><h5>HP</h5>
 		</div>
 		<div class='character' data-player='4'>
 			<h5>Padme</h5>
 			<img src='assets/images/padme.jpeg' alt='Padme'>
-			<h5 class='score'>150</h5>
+			<h5 class='score'>150</h5><h5>HP</h5>
 		</div>
 </div>
 		<h2 class='player'>Your Character</h2>
 		<h2 class='enemies'>Enemies Available to Attack</h2>
 		<h2 class='fight'>Fight Section </h2>
 		<button class='attack'>
-			<h5>Attack</h5>
+			<h4>Attack</h4>
 		</button>
-		<h2 class='defender'>Defender</h2>
+		<h2 class='defender'>Your Opponent</h2>
 		<p class='playerAttacks'></p>
 		<p class='defenderAttacks'></p>
 		<span class='lost won status'></span>
+		<br>
 		<button onClick='window.location.reload()'>
-			<h5>Restart</h5>
+			<h4>Restart</h4>
 		</button>
 	</div>
 </section>
