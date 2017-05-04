@@ -59,7 +59,7 @@ p {
 	letter-spacing: .035em;
 	word-spacing: 0.15em;
 }
-
+/* establishes character box aethetic */
 .character {
 	background-color: #FFFFFF;
 	width: 220px;
@@ -72,11 +72,11 @@ button {
 	background-color: #D9AF8B;
 	margin: 10px;
 }
-
+/* sets background color for opponent */
 .selectedOpponent {
 	background: #e85d5d;
 }
-
+/* sets hero background color */
 .selectedHero {
 	background-color: #B8F4CC;
 }

@@ -14,8 +14,10 @@
 <body>
 <section>
 <h1>Star Wars RPG</h1>
+<!-- instructions appear here -->
 <h2 id='instructions'>Choose a hero and then choose an opponent to fight!</h2>
 <div class='inactive'>
+<!-- characters start here -->
 		<div class='character' data-player='1'>
 			<h5>Obi-Wan Kenobi</h5>
 			<img src='assets/images/obi-wan-kenobi.jpg' alt='Obi-Wan Kenobi'>
@@ -39,18 +41,22 @@
 </div>
 		<h2 class='enemies'>Enemies Left to Defeat</h2>
 		<h2 class='player'>Your Character</h2>
+		<!-- on click your hero goes here that you select -->
 		<h2 class='fight'>Fight Section </h2>
 		<button class='attack'>
 			<h4>Attack</h4>
 		</button>
 		<h2 class='opponent'>Your Opponent</h2>
+		<!-- when you select opponet they are appended here -->
 		<p class='playerAttacks'></p>
 		<p class='opponentAttacks'></p>
 		<span class='status'></span>
 		<br>
+		<!-- resets game -->
 		<button onClick='window.location.reload()'>
 			<h4>Restart</h4>
 		</button>
+		<!-- victory or loss message is broadcasted here -->
 		<span class='lost won'></span>
 	</div>
 </section>
