@@ -30,7 +30,7 @@ var yourCharacter = false;
 	var thirdPlayer = {
 		name: 'Jar Jar Binks',
 		healthPoints: 200,
-		attackPower: Math.floor((Math.random() * 10) + 1),
+		attackPower: Math.floor((Math.random() * 10) + 5),
 		counterAttackPower: Math.floor((Math.random() * 10) + 10),
 		numberOfAttacks: 1
 	}
@@ -38,7 +38,7 @@ var yourCharacter = false;
 	var fourthPlayer = {
 		name: 'Padme',
 		healthPoints: 150,
-		attackPower: Math.floor((Math.random() * 10) + 10),
+		attackPower: Math.floor((Math.random() * 10) + 15),
 		counterAttackPower: Math.floor((Math.random() * 10) + 10),
 		numberOfAttacks: 1
 	}
@@ -149,7 +149,7 @@ var yourCharacter = false;
 			if (enemyDefeatedCount === 0) {
 				$('.enemies').html('Your enemies have defeated you!');
 			}
-			else {
+			if (enemyDefeatedCount === 2) {
 				$('.enemies').html('');
 			}
 			$('.player').html('Your character has been defeated!');
