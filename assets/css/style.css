@@ -48,8 +48,16 @@ img {
 }
 
 p {
+	font-family: 'Oswald', sans-serif;
 	margin-left: 10px;
 	color: #FFFFFF;
+	text-shadow:
+			-.5px -.5px 0 #000,  
+			.5px -.5px 0 #000,
+			-.5px .5px 0 #000,
+			.5px .5px 0 #000;
+	letter-spacing: .035em;
+	word-spacing: 0.15em;
 }
 
 .character {

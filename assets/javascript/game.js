@@ -14,32 +14,32 @@ var yourCharacter = false;
 	var firstPlayer = {
 		name: 'Obi-Wan Kenobi',
 		healthPoints: 150,
-		attackPower: 15,
-		counterAttackPower: 35,
+		attackPower: Math.floor((Math.random() * 10) + 10),
+		counterAttackPower: Math.floor((Math.random() * 20) + 10),
 		numberOfAttacks: 1
 	}
 
 	var secondPlayer = {
 		name: 'Darth Maul',
 		healthPoints: 120,
-		attackPower: 25,
-		counterAttackPower: 45,
+		attackPower: Math.floor((Math.random() * 10) + 10),
+		counterAttackPower: Math.floor((Math.random() * 20) + 25),
 		numberOfAttacks: 1
 	}
 
 	var thirdPlayer = {
 		name: 'Jar Jar Binks',
 		healthPoints: 200,
-		attackPower: 10,
-		counterAttackPower: 20,
+		attackPower: Math.floor((Math.random() * 10) + 1),
+		counterAttackPower: Math.floor((Math.random() * 10) + 10),
 		numberOfAttacks: 1
 	}
 
 	var fourthPlayer = {
 		name: 'Padme',
 		healthPoints: 150,
-		attackPower: 20,
-		counterAttackPower: 25,
+		attackPower: Math.floor((Math.random() * 10) + 10),
+		counterAttackPower: Math.floor((Math.random() * 10) + 10),
 		numberOfAttacks: 1
 	}
 
@@ -73,12 +73,13 @@ var yourCharacter = false;
 			$('.enemies').after($('.inactive .character'));
 			}
 
-		} else if (yourOpponent === false) {
+		} 
+		else if (yourOpponent === false) {
 			$('.opponent').after($this);
 			yourOpponent = playersArray[$this.data('player') - 1];
 			yourOpponent.element = $this;
 			$this.addClass('selectedOpponent')
-			$('#instructions').html('Keep Attacking until all Enemies are Defeated');
+			$('#instructions').html('Keep attacking until all enemies are defeated!');
 			$('.status').html('');
 			$('.playerAttacks').html('');
 			$('.opponentAttacks').html('');
@@ -121,11 +122,13 @@ var yourCharacter = false;
 				$('.fight').html('');
 				$('.enemies').html('');
 				$('.opponent').html('');
-				$('.player').html('Your Character is Victorious!');
-				$('.won').html('<h1>' + 'You Won! Hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
+				$('.status').html('<h2>' + 'You defeated your enemies!' + '</h2>');
+				$('.player').html('Your character is victorious!');
+				$('.won').html('<h1>' + 'You won! Hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
 			}
 
-		} else {
+		} 
+		else {
 			x.healthPoints -= y.counterAttackPower;
 			x.element.find('.score').html(x.healthPoints);
 			clash.play();
@@ -140,12 +143,18 @@ var yourCharacter = false;
 			$('.opponentAttacks').hide();
 			$('#instructions').html('');
 			$('.fight').html('');
-			$('.player').html('Your Character had been Defeated!');
-			$('.opponent').html('Your Opponent is Victorious!');
-			$('.lost').html('<h1>' + 'You Lost, hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
+			if (enemyDefeatedCount === 1) {
+				$('.enemies').html('Your enemies have defeated you!');
+			}
+			else {
+				$('.enemies').html('');
+			}
+			$('.player').html('Your character has been defeated!');
+			$('.opponent').html('Your opponent is victorious!');
+			$('.lost').html('<h1>' + 'You lost, hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
 		}
 
-		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage.');
+		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage. Your strength grows with every attack!');
 		$('.opponentAttacks').html(y.name + ' attacked you for ' + y.counterAttackPower + ' damage.');
 	};
 
