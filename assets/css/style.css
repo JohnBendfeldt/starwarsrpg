@@ -17,82 +17,49 @@ h1 {
 h2 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 32px;
+	margin: 10px;
+}
+a, h5 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 15px;
+	text-align: center;
 }
 img {
 	width: 200px;
 	height: 100px;
+	margin: 0 auto;
 }
-.heading, .player, .enemies, .fight, .defender{
-
-	color:white;
-	font-size: 15px;
-	padding-left: 15px;
-}
-
-.notice{
-	color:#CDDC39;
-	margin-top: 5px;
+.character {
+	background-color: #FFFFFF;
+	width: 220px;
+	border: 4px solid #000;
+	margin: 5px;
+	display: inline-block;
 }
 .attack{
-	background: #CDDC39;
+	background: #FD92AC;
 	color:black;
 	border-radius: 4px;
-	
 }
-.heading{
-	font-size: 25px;
-	width:60%;
-	display:inline;
-	
-}
-
 .clear{
 	height:30px;
 	width:80px;
 	font-size:15px;
-	background: #CDDC39;
+	background: #FD92AC;
 	color:black;
 }
-
-.attackRow, .restartRow{
-	padding-left: 15px;
+button {
+	margin: 10px;
 }
-
-
-.thumbnail:hover,
-.selectedOpponent > .thumbnail{
-	background-color: #CDDC39;
-}
-
-
-.selectedDefender>.thumbnail{
+.selectedDefender {
 background: #e85d5d;
 /*color:black;*/
-
-}
-.thumbnail{
-	color:black;
-}
-
-
-
-.row.inactive{
-	margin:0;
-	/*display: inline;*/
 }
 .lost, .playerAttacks, .defenderAttacks{
-	color:white;
-}
-.tag{
-	
-    width: 165px;
-    position:absolute;
-    top: 0;
-    right: 0;
-    /*color:inherit;*/
+	color: #FFFFFF;
 }
 .name{
-	color:white;
+	color: #FFFFFF;
 	font-weight: bold;
 	color:#CDDC39;
 	font-size:20px;

@@ -5,7 +5,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Star Wars RPG</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
@@ -14,60 +13,44 @@
 </head>	
 <body>
 <h1>Star Wars RPG!</h1>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="row inactive">
-        <div class="col-xs-6 col-md-2 character first" data-player="1">
-          <a href="#" class="thumbnail"> Obi-Wan Kenobi
-            <img class="first images" src="assets/images/obi-wan-kenobi.jpg" alt="Obi-Wan Kenobi">
+<div class="inactive">
+        <div class="character first" data-player="1">
+        	<h5>Obi-Wan Kenobi</h5>
+            <img src="assets/images/obi-wan-kenobi.jpg" alt="Obi-Wan Kenobi">
             <h5 class="score">150</h5>
-          </a>
         </div>
-        <div class="col-xs-6 col-md-2 character second" data-player="2">
-          <a href="#" class="thumbnail"> Darth Maul
-            <img class="second images" src="assets/images/darth-maul.jpeg" alt="Darth Maul">
+        <div class="character second" data-player="2">
+          	<h5>Darth Maul</h5>
+            <img src="assets/images/darth-maul.jpeg" alt="Darth Maul">
             <h5 class="score">120</h5>
-          </a>
         </div>
-        <div class="col-xs-6 col-md-2 character third" data-player="3">
-          <a href="#" class="thumbnail"> Jar Jar Binks
-            <img class="third images" src="assets/images/jar-jar.jpg" alt="Jar Jar Binks">
+        <div class="character third" data-player="3">
+			<h5>Jar Jar Binks</h5>
+            <img src="assets/images/jar-jar.jpg" alt="Jar Jar Binks">
             <h5 class="score">200</h5>
-          </a>
         </div>
         
-        <div class="col-xs-6 col-md-2 character fourth" data-player="4">
-          <a href="#" class="thumbnail"> Padme
-            <img class="fourth images" src="assets/images/padme.jpeg" alt="Padme">
+        <div class="character fourth" data-player="4">
+			<h5>Padme</h5>
+            <img src="assets/images/padme.jpeg" alt="Padme">
             <h5 class="score">150</h5>
           </a>
         </div>
       </div>
-      
-      <div class="row">
-        <h2 class="col-md-12 player">Your Character</h2>
-      </div>
-      <div class="row">
+        <h2 class="player">Your Character</h2>
         <h2 class="enemies">Enemies Available to Attack</h2>
-      </div>
-      
-      <div class="row">
         <h2 class='fight'>Fight Section </h2>
-      </div>
-      <div class="row attackRow">
+      <div class="attackRow">
         <button class="attack">Attack</button>
       </div>
-      <div class="row defender-row">
+      <div class="defender-row">
         <h2 class="defender">Defender</h2>
       </div>
       <p class='playerAttacks'></p>
       <p class='defenderAttacks'></p>
       <p class='lost won blink'></p>
-      <div class="row restartRow">
-        <button id="button" class="btn btn-default clear" value='Refresh Page restart' onClick="window.location.reload()"><p>Restart</p></button>
+      <div class="restartRow">
+        <button id="button" class="clear" value='Refresh Page restart' onClick="window.location.reload()"><p>Restart</p></button>
       </div>
      
     </div>

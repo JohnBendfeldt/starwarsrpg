@@ -13,34 +13,34 @@ $(document).ready(function() {
     var firstPlayer = {
         name: "Obi-Wan Kenobi",
 		healthPoints: 150,
-		attackPower: 50,
+		attackPower: 35,
 		counterAttackPower: 30,
-        numberOfAttacks: 1
+        numberOfAttacks: .25
 
     }
 
     var secondPlayer = {
         name: "Darth Maul",
 		healthPoints: 120,
-		attackPower: 40,
+		attackPower: 30,
 		counterAttackPower: 25,
-        numberOfAttacks: 1
+        numberOfAttacks: .25
     }
 
     var thirdPlayer = {
         name: "Jar Jar Binks",
 		healthPoints: 200,
-		attackPower: 75,
+		attackPower: 55,
 		counterAttackPower: 50,
-        numberOfAttacks: 1
+        numberOfAttacks: .25
     }
 
     var fourthPlayer = {
         name: "Padme",
 		healthPoints: 150,
-		attackPower: 60,
+		attackPower: 45,
 		counterAttackPower: 40,
-        numberOfAttacks: 1
+        numberOfAttacks: .25
     }
 
     playersArray.push(firstPlayer);
