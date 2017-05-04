@@ -146,6 +146,9 @@ var yourCharacter = false;
 			if (enemyDefeatedCount === 1) {
 				$('.enemies').html('Your enemies have defeated you!');
 			}
+			if (enemyDefeatedCount === 0) {
+				$('.enemies').html('Your enemies have defeated you!');
+			}
 			else {
 				$('.enemies').html('');
 			}
