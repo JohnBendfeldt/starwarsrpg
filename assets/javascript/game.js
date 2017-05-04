@@ -56,8 +56,7 @@ var yourCharacter = false;
 		yourOpponent = false;
 	};
 	// appending players as your hero, enemies and opponent
-	function selectOpponents(event) {
-		event.preventDefault();
+	function selectOpponents() {
 		var $this = $(this);
 		// selecting hero
 		if (yourCharacter === false) {
