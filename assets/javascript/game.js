@@ -6,10 +6,10 @@ var yourCharacter = false;
 	playersArray = [];
 	enemyDefeatedCount = 0;
 	audioWin = new Audio('assets/audio/victory.mp3');
-    audioLoss = new Audio('assets/audio/imperial_march.mp3');
-    clash = new Audio('assets/audio/fight.wav');
-    slay = new Audio('assets/audio/slay.wav');
-    death = new Audio('assets/audio/death.wav');
+	audioLoss = new Audio('assets/audio/imperial_march.mp3');
+	clash = new Audio('assets/audio/fight.wav');
+	slay = new Audio('assets/audio/slay.wav');
+	death = new Audio('assets/audio/death.wav');
 	// creating characters and stats and assigning them to an array 
 	var firstPlayer = {
 		name: 'Obi-Wan Kenobi',
@@ -62,19 +62,19 @@ var yourCharacter = false;
 		event.preventDefault();
 		var $this = $(this);
 		if (yourCharacter === false) {
-            
 			$('.player').after($this);
 			yourCharacter = playersArray[$this.data('player') - 1];
 			yourCharacter.element = $this;
 			$this.addClass('selectedHero');
-			$this.removeClass('')
-
 			if (yourCharacter) {
 			$('.enemies').after($('.inactive .character'));
 			}
 
 		} 
 		else if (yourOpponent === false) {
+			if($this.hasClass('selectedHero')) {
+			return;
+			}
 			$('.opponent').after($this);
 			yourOpponent = playersArray[$this.data('player') - 1];
 			yourOpponent.element = $this;
