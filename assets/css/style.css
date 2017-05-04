@@ -87,10 +87,12 @@ button {
 	
 	h1 {
 		float: none;
-		margin-left: 5px;
+		margin: 5px;
+		font-size: 24px;
 	}
 	h2 {
 		margin-left: 5px;
+		font-size: 16px;
 	}
 
 	img {
