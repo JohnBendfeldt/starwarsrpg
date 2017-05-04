@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+// establish var values
 var yourCharacter = false;
 	yourEnemies = false;
 	yourOpponent = false;
@@ -48,8 +48,6 @@ var yourCharacter = false;
 	playersArray.push(thirdPlayer);
 	playersArray.push(fourthPlayer);
 
-
-
 	// Sets game state
 
 	function startGame() {
@@ -61,6 +59,7 @@ var yourCharacter = false;
 	function selectOpponents(event) {
 		event.preventDefault();
 		var $this = $(this);
+		// selecting hero
 		if (yourCharacter === false) {
 			$('.player').after($this);
 			yourCharacter = playersArray[$this.data('player') - 1];
@@ -69,12 +68,14 @@ var yourCharacter = false;
 			if (yourCharacter) {
 			$('.enemies').after($('.inactive .character'));
 			}
-
 		} 
+		// selecting opponent
 		else if (yourOpponent === false) {
+			// makes it so you can't attack yourself
 			if($this.hasClass('selectedHero')) {
 			return;
 			}
+			// moves opponent to their area
 			$('.opponent').after($this);
 			yourOpponent = playersArray[$this.data('player') - 1];
 			yourOpponent.element = $this;
@@ -133,7 +134,7 @@ var yourCharacter = false;
 			x.element.find('.score').html(x.healthPoints);
 			clash.play();
 		}
-
+		// Determines losing sequence
 		if (x.healthPoints <= 0) {
 			x.element.hide();
  			$('.attack').hide();
@@ -156,7 +157,7 @@ var yourCharacter = false;
 			$('.opponent').html('Your opponent is victorious!');
 			$('.lost').html('<h1>' + 'You lost, hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
 		}
-
+		// explains attack sequence
 		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage. Your strength grows with every attack!');
 		$('.opponentAttacks').html(y.name + ' attacked you for ' + y.counterAttackPower + ' damage.');
 	};
