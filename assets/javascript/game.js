@@ -15,7 +15,7 @@ var yourCharacter = false;
 		name: 'Obi-Wan Kenobi',
 		healthPoints: 150,
 		attackPower: 15,
-		counterAttackPower: 25,
+		counterAttackPower: 35,
 		numberOfAttacks: 1
 	}
 
@@ -23,15 +23,15 @@ var yourCharacter = false;
 		name: 'Darth Maul',
 		healthPoints: 120,
 		attackPower: 25,
-		counterAttackPower: 20,
+		counterAttackPower: 45,
 		numberOfAttacks: 1
 	}
 
 	var thirdPlayer = {
 		name: 'Jar Jar Binks',
 		healthPoints: 200,
-		attackPower: 20,
-		counterAttackPower: 35,
+		attackPower: 10,
+		counterAttackPower: 20,
 		numberOfAttacks: 1
 	}
 
