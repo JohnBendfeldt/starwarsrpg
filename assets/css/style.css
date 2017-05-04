@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+
 body {
-	background-image: url("../images/bg-starwars.jpg");
+	background-image: url('../images/bg-starwars.jpg');
 	background-size: 2000px 1000px;
 }
+
 h1 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 48px;
@@ -10,28 +12,34 @@ h1 {
 	margin: 20px;
 	text-shadow:
 			-1px -1px 0 #FFFFFF,  
-    		1px -1px 0 #FFFFFF,
-    		-1px 1px 0 #FFFFFF,
-     		1px 1px 0 #FFFFFF;
+			1px -1px 0 #FFFFFF,
+			-1px 1px 0 #FFFFFF,
+			1px 1px 0 #FFFFFF;
 }
+
 h2 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 32px;
-	margin: 10px;
+	margin: 5px;
 }
+
 h5 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 15px;
 	text-align: center;
 }
+
 img {
 	width: 200px;
 	height: 100px;
 	margin: 0 10px;
 }
+
 p {
 	margin-left: 15px;
+	color: #FFFFFF;
 }
+
 .character {
 	background-color: #FFFFFF;
 	width: 220px;
@@ -39,28 +47,16 @@ p {
 	margin: 5px;
 	display: inline-block;
 }
-.attack{
-	background: #FD92AC;
-	border-radius: 4px;
-}
-.clear{
-	height:30px;
-	width:80px;
-	font-size:15px;
-	background: #FD92AC;
-}
+
 button {
-	margin: 10px;
+	background-color: #D9AF8B;
+	margin: 5px;
 }
+
 .selectedDefender {
-background: #e85d5d;
+	background: #e85d5d;
 }
-.lost, .playerAttacks, .defenderAttacks{
-	color: #FFFFFF;
-}
-.name{
-	color: #FFFFFF;
-	font-weight: bold;
-	color:#CDDC39;
-	font-size:20px;
+
+.selectedHero {
+	background-color: #B8F4CC;
 }

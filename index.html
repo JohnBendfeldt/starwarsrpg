@@ -1,57 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang='en-us'>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	<title>Star Wars RPG</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<link rel='stylesheet' type='text/css' href='assets/css/reset.css'>
+	<link rel='stylesheet' type='text/css' href='assets/css/style.css'>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+	<script type='text/javascript' src='assets/javascript/game.js'></script>
 
 </head>	
 <body>
+<section>
 <h1>Star Wars RPG!</h1>
-<div class="inactive">
-        <div class="character" data-player="1">
-        	<h5>Obi-Wan Kenobi</h5>
-            <img src="assets/images/obi-wan-kenobi.jpg" alt="Obi-Wan Kenobi">
-            <h5 class="score">150</h5>
+<div class='inactive'>
+		<div class='character' data-player='1'>
+			<h5>Obi-Wan Kenobi</h5>
+			<img src='assets/images/obi-wan-kenobi.jpg' alt='Obi-Wan Kenobi'>
+			<h5 class='score'>150</h5>
         </div>
-        <div class="character" data-player="2">
-          	<h5>Darth Maul</h5>
-            <img src="assets/images/darth-maul.jpeg" alt="Darth Maul">
-            <h5 class="score">120</h5>
-        </div>
-        <div class="character" data-player="3">
-			<h5>Jar Jar Binks</h5>
-            <img src="assets/images/jar-jar.jpg" alt="Jar Jar Binks">
-            <h5 class="score">200</h5>
-        </div>
-        
-        <div class="character" data-player="4">
-			<h5>Padme</h5>
-            <img src="assets/images/padme.jpeg" alt="Padme">
-            <h5 class="score">150</h5>
-          </a>
-        </div>
-      </div>
-        <h2 class="player">Your Character</h2>
-        <h2 class="enemies">Enemies Available to Attack</h2>
-        <h2 class='fight'>Fight Section </h2>
-        <button class="attack">
-        	<h5>Attack</h5>
-        </button>
-		<div class="defender-row">
-			<h2 class="defender">Defender</h2>
+		<div class='character' data-player='2'>
+			<h5>Darth Maul</h5>
+			<img src='assets/images/darth-maul.jpeg' alt='Darth Maul'>
+			<h5 class='score'>120</h5>
 		</div>
+		<div class='character' data-player='3'>
+			<h5>Jar Jar Binks</h5>
+			<img src='assets/images/jar-jar.jpg' alt='Jar Jar Binks'>
+			<h5 class='score'>200</h5>
+		</div>
+		<div class='character' data-player='4'>
+			<h5>Padme</h5>
+			<img src='assets/images/padme.jpeg' alt='Padme'>
+			<h5 class='score'>150</h5>
+		</div>
+</div>
+		<h2 class='player'>Your Character</h2>
+		<h2 class='enemies'>Enemies Available to Attack</h2>
+		<h2 class='fight'>Fight Section </h2>
+		<button class='attack'>
+			<h5>Attack</h5>
+		</button>
+		<h2 class='defender'>Defender</h2>
 		<p class='playerAttacks'></p>
 		<p class='defenderAttacks'></p>
-		<p class='lost won blink'></p>
-		<button id="button" class="clear" value='Refresh Page restart' onClick="window.location.reload()">
+		<span class='lost won status'></span>
+		<button onClick='window.location.reload()'>
 			<h5>Restart</h5>
 		</button>
-    </div>
+	</div>
+</section>
 </body>
 </html>
