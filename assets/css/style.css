@@ -108,6 +108,7 @@ button {
 
 	button {
 		margin-left: 5px;
+		display: inline;
 	}
 	p {
 		margin-left: 5px;

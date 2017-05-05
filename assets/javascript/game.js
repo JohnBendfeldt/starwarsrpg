@@ -133,6 +133,9 @@ var yourCharacter = false;
 			x.element.find('.score').html(x.healthPoints);
 			clash.play();
 		}
+		if (enemyDefeatedCount === 2) {
+				$('.enemies').html('');
+			}
 		// Determines losing sequence
 		if (x.healthPoints <= 0) {
 			x.element.hide();
