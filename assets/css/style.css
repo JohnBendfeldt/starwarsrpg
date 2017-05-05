@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 body {
-	background-image: url('../images/bg-starwars.jpg');
+	background-image: url('../images/bg-starwars.gif');
 	background-size: 2000px 1000px;
 }
 
@@ -85,11 +85,16 @@ button {
 
 @media only screen and (max-width: 768px) {
 	
+	body {
+		background-size: 1000px 500px;
+	}
+
 	h1 {
 		float: none;
 		margin: 5px;
 		font-size: 24px;
 	}
+
 	h2 {
 		margin-left: 5px;
 		font-size: 16px;
