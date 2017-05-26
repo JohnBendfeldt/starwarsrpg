@@ -87,7 +87,15 @@ var yourCharacter = false;
 		}
 	};
 
-
+	function startAnimation () {
+		if(!yourOpponent){
+			return
+		}
+		$('.selectedHero, .selectedOpponent').addClass('animated');
+		setTimeout(function() {
+			$('.selectedHero, .selectedOpponent').removeClass('animated');
+		}, 250)
+	}
 	// Sets up the fight between characters
 
 	function fight(x, y) {
@@ -168,5 +176,6 @@ var yourCharacter = false;
 	$('.character').on('click', selectOpponents);
 	$('.attack').on('click', function() {
 		fight(yourCharacter, yourOpponent);
+		startAnimation();
 	});
 });
