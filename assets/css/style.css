@@ -103,7 +103,6 @@ button {
 /* establishes snow fall using 3 repeating png files of snow with background set to none */
 #snow{
 	background: none;
-	font-family: Androgyne;
 	background-image: url('../images/s1.png'), url('../images/s2.png'), url('../images/s3.png');
 	height: 100%;
 	left: 0;
