@@ -132,7 +132,7 @@ var yourCharacter = false;
 				$('.opponent').html('');
 				$('.status').html('<h2>' + 'You defeated your enemies!' + '</h2>');
 				$('.player').html('Your character is victorious!');
-				$('.won').html('<h1>' + 'You won! Hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
+				$('.won').html('<h1>' + 'You won! Hit ' + '<button onClick="window.location.reload()" class="winButton">' + '<h2 class="winButton">' + 'Restart' + '</h2>' + '</button>' + ' if you want to play again!' + '</h1>');
 			}
 
 		} 
@@ -165,7 +165,7 @@ var yourCharacter = false;
 			}
 			$('.player').html('Your character has been defeated!');
 			$('.opponent').html('Your opponent is victorious!');
-			$('.lost').html('<h1>' + 'You lost, hit ' + '<button>' + '<h2 onClick="window.location.reload()">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
+			$('.lost').html('<h1>' + 'You lost, hit ' + '<button onClick="window.location.reload()" class="winButton">' + '<h2 class="winButton">' + 'Restart' + '</h2>' + '</button>' + ' to try again!' + '</h1>');
 		}
 		// explains attack sequence
 		$('.playerAttacks').html('You attacked ' + y.name + ' for ' + attackPowerIncrement + ' damage. Your strength grows with every attack!');

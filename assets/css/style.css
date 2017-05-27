@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
 @keyframes blingbling {
-    0%   {border: 4px solid black;}
-    25%  {border: 12px solid green;}
-    50%  {border: 4px solid red;}
-    75%	 {border: 8px solid blue;}
-    100% {border: 16px solid white;}
+    0%   {background-color: #FFFFFF;}
+    25%  {background-color: #EC1415;}
+    50%  {background-color: #CBFFEF;}
+    75%	 {background-color: #EC1415;}
+    100% {background-color: #CBFFEF;}
 }
 
 /* The element to apply the animation to */
@@ -34,8 +34,8 @@ h1 {
 
 h2 {
 	font-family: 'Oswald', sans-serif;
-	font-size: 32px;
-	margin: 0 10px;
+	font-size: 28px;
+	margin: 10px 50px;
 	text-shadow:
 			-.5px -.5px 0 #FFFFFF,  
 			.5px -.5px 0 #FFFFFF,
@@ -53,26 +53,24 @@ h5 {
 	font-family: 'Oswald', sans-serif;
 	font-size: 15px;
 	text-align: center;
-	display: inline-block;
-	margin-left: 10px;
 }
 
 img {
 	width: 200px;
 	height: 100px;
-	margin: 0 10px;
+	margin: 0px 10px;
 }
 
 p {
 	font-family: 'Oswald', sans-serif;
-	margin-left: 10px;
+	margin-left: 50px;
 	color: #FFFFFF;
 	text-shadow:
-			-.5px -.5px 0 #000,  
-			.5px -.5px 0 #000,
-			-.5px .5px 0 #000,
-			.5px .5px 0 #000;
-	letter-spacing: .035em;
+			-.5px -.5px 0 #EC1415,  
+			.5px -.5px 0 #EC1415,
+			-.5px .5px 0 #EC1415,
+			.5px .5px 0 #EC1415;
+	letter-spacing: 0.1em;
 	word-spacing: 0.15em;
 }
 /* establishes character box aethetic */
@@ -80,14 +78,20 @@ p {
 	background-color: #FFFFFF;
 	width: 220px;
 	border: 4px solid #000;
-	margin-left: 10px;
+	margin-left: 50px;
+	margin-top: 5px;
 	display: inline-block;
 }
 
 button {
 	background-color: #D9AF8B;
-	margin: 10px;
+	margin: 5px 50px;
 }
+/* establishes no maringins for the win/loss button */
+.winButton {
+	margin: 0px 0px;
+}
+
 /* sets background color for opponent */
 .selectedOpponent {
 	background: #e85d5d;
