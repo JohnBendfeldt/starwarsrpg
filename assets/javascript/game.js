@@ -179,3 +179,4 @@ var yourCharacter = false;
 		startAnimation();
 	});
 });
+
